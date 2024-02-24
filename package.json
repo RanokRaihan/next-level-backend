@@ -1,0 +1,16 @@
+{
+  "name": "next-level-backend",
+  "version": "1.0.0",
+  "description": "Learning backend by partice with hitesh. youtube chanel: chai aur code.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "backend",
+    "node",
+    "express"
+  ],
+  "author": "Ranok Raihan",
+  "license": "ISC"
+}
