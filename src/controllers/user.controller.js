@@ -4,6 +4,8 @@ import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
+
+//generate access and refresh token
 const genAccessRefreshToken = async (userId) => {
   try {
     const user = await User.findById(userId);
@@ -17,6 +19,7 @@ const genAccessRefreshToken = async (userId) => {
   }
 };
 
+//create a new user
 const registerUser = asyncHandler(async (req, res) => {
   //  get user data from frontend
   const { fullName, email, username, password } = req.body;
@@ -78,6 +81,11 @@ const registerUser = asyncHandler(async (req, res) => {
   return res
     .status(201)
     .json(new ApiResponse(200, createdUser, "User registered successfully"));
+});
+
+//update a user profile
+const updateUser = asyncHandler(async (req, res) => {
+  //update registered user
 });
 
 // login controller
